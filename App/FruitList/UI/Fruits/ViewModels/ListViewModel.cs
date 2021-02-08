@@ -42,10 +42,10 @@ namespace FruitList.UI.Fruits.ViewModels
             _getCurrentUserFruits = getCurrentUserFruits;
             Title = "Main Page";
 
-            LoadOrders();
+            LoadFruits();
         }
 
-        private async void LoadOrders()
+        private async void LoadFruits()
         {
             IReadOnlyList<Fruit> resultFruits = await _getCurrentUserFruits.Invoke();
 
