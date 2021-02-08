@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DataTemplate
+    x:Class="FruitList.UI.Fruits.Views.DataTemplates.ListDataTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+
+        <Image
+            Grid.Row="0"
+            Grid.RowSpan="3"
+            Grid.Column="0"
+            Margin="0,20,20,0"
+            HeightRequest="75"
+            Source="{Binding ImageURL}"
+            WidthRequest="75" />
+
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,20,0,0"
+            FontAttributes="Bold"
+            Text="{Binding Name}"
+            TextColor="#626262" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding Origin}"
+            TextColor="#8e8e8e" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            Text="{Binding Price, StringFormat='{0:c}'}"
+            TextColor="#479b6a" />
+        <Image
+            Grid.Row="2"
+            Grid.Column="2"
+            Source="Heart" />
+    </Grid>
+</DataTemplate>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FruitList.UI.Fruits.Views.ListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:FruitList.Controls"
+    xmlns:local="clr-namespace:FruitList.UI.Fruits.Views.DataTemplates"
+    Title="List View">
+    <StackLayout Padding="25" BackgroundColor="#fafafa">
+        <Picker
+            HorizontalOptions="EndAndExpand"
+            ItemsSource="{Binding OrientationsData}"
+            SelectedIndex="{Binding SelectedOrientationData, Converter={StaticResource ToEnumValueConverter}}"
+            WidthRequest="50" />
+        <controls:CustomCollectionView
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding Fruits}"
+            OrientationData="{Binding SelectedOrientationData}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <local:ListDataTemplate />
+            </CollectionView.ItemTemplate>
+            <CollectionView.Triggers>
+                <Trigger TargetType="controls:CustomCollectionView" Property="OrientationData" Value="Grid">
+                    <Setter Property="ItemsLayout">
+                        <GridItemsLayout
+                            HorizontalItemSpacing="10"
+                            Orientation="Vertical"
+                            Span="2"
+                            VerticalItemSpacing="10" />
+                    </Setter>
+                    <Setter Property="ItemTemplate">
+                        <local:RowDataTemplate />
+                    </Setter>
+                </Trigger>
+            </CollectionView.Triggers>
+        </controls:CustomCollectionView>
+    </StackLayout>
+</ContentPage>

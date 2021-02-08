@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DataTemplate
+    x:Class="FruitList.UI.Fruits.Views.DataTemplates.RowDataTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="15,10,0,0"
+            FontAttributes="Bold"
+            FontSize="Body"
+            Text="{Binding Name}"
+            TextColor="#626262" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="15,0,0,0"
+            Text="{Binding Origin}"
+            TextColor="#8e8e8e" />
+        <Image
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,10,0,10"
+            HeightRequest="100"
+            Source="{Binding ImageURL}"
+            WidthRequest="100" />
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="15,0,0,0"
+            FontAttributes="Bold"
+            Text="{Binding Price, StringFormat='{0:c}'}"
+            TextColor="#479b6a"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="0,0,10,0"
+            HeightRequest="30"
+            HorizontalOptions="End"
+            Source="Heart" />
+    </Grid>
+
+</DataTemplate>
