@@ -1,7 +1,26 @@
 
-Fruit List
+## Fruit List
 
+#### Technologies
 
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-19 at 16 32 52](https://user-images.githubusercontent.com/22477389/126384790-8bfcb18c-efa4-4a6c-a49b-91ddd921de25.png)
+- Xamarin Forms
+- Prism
 
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-19 at 16 32 40](https://user-images.githubusercontent.com/22477389/126384977-fc733ca0-33a5-4dd0-8316-4893b2db52d3.png)
+#### Architecture
+
+- Clean Architecture
+
+#### Practices
+- Custom Controls
+- Template Controls
+
+[Based on](https://www.behance.net/gallery/61724679/e-commerce-app-fruits)
+
+---
+## Grid
+
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-19 at 16 32 52](https://user-images.githubusercontent.com/22477389/126387584-bfa4955b-e3ef-4945-a229-76d77355f294.png)
+
+## List
+
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-07-19 at 16 32 40](https://user-images.githubusercontent.com/22477389/126387565-5dc1a929-fb8c-42a0-8cd3-94728b9b35e9.png)
